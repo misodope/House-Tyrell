@@ -1,12 +1,6 @@
 body {
   font-family: 'Catamaran', sans-serif;
-  -webkit-app-region: drag;
-  margin: 0 !important;
-}
-
-html {
-  margin: 0 !important;
-  background-color: #f9f9f9 !important;
+  margin: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -15,43 +9,43 @@ html {
 
 .saleItemGrid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(15vh, 1fr));
-  grid-template-rows: repeat(6, minmax(18vh, 1fr));
-  grid-column-gap: 1%;
-  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: #ededed;
   text-align: center;
   min-height: 30vh;
   max-height: 86vh;
   overflow-y: scroll;
-  padding: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
   margin: 0;
+  grid-column: 1 / 4;
+  grid-row: 1 / 1;
 }
 
 .saleItemGrid * {
-  background-color: #545454;
+  background-color: white;
   margin: 0;
   padding: 0;
   overflow-wrap: break-word;
-  border-radius: 5%;
+  border-radius: 4%;
 }
 
 .saleItemGrid h3 {
-  margin: 10%;
-  color: white;
+  border-radius: 15%;
 }
 
 .saleItemGrid > * {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4%;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
 }
 
 
 .saleTransactionGrid {
-  grid-column: 4 / 4;
-  grid-row: 1 / 3;
+  grid-column: 4 / 5;
+  grid-row: 1 / 1;
 }
 
 
@@ -66,18 +60,17 @@ html {
 }
 
 .transactionGrid {
-  border-left: 1px solid black;
-  grid-row: 1 / 3;
-  background-color: #ededed;
   display: grid;
-  grid-template-rows: auto 1fr 1fr 1fr auto 1fr;
-  height: 100%;
+  grid-template-rows: 5vh 62vh 10vh;
+  padding-top: 1%;
+  border-left: 1px solid black;
+  background-color: #ededed;
 }
 
 .transactionClearButton {
   grid-row: 1;
   grid-column: 4;
-  color: #e65959;
+  color: red;
   border-radius: 5%;
   padding-top: 3%
 
@@ -86,28 +79,26 @@ html {
 .transactionGridHeader {
   grid-row: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 8%;
+  grid-template-rows: 5vh;
+  grid-template-columns: 5vh 15vh 12vh;
 }
 
 .transactionGridItems {
-  grid-row: 2 / 5;
+  grid-row: 2;
   overflow-y: scroll;
-  max-height: 55vh;
   display:grid;
-  grid-template-rows: repeat(13, 1fr);
-  grid-row-gap: 5.5%;
+  grid-template-rows: repeat(13, auto);
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .transactionGridFooter {
   display: grid;
-  grid-row: 5;
-  grid-template-rows: auto auto auto auto;
+  grid-row: 3;
+  grid-template-rows: 2.5vh 2.5vh 2.5vh 2.5vh;
   grid-template-columns: 5vh 10vh 8vh;
   text-align: right;
   grid-column: 1;
-  background-color: rgb(90, 90, 90);
+  background-color: rgb(84, 178, 255);
   color: white;
   width: 100%;
 }
@@ -131,17 +122,12 @@ html {
   grid-column: 1 / 4;
 }
 
-/* .saleCategoryGrid > div {
-  height: 100%;
-} */
-
 .saleCategoryGrid button {
   width: 25%;
-  background-color: rgb(90, 90, 90);
+  background-color: rgb(84, 178, 255);
   color: white;
   font-size: 1.5em;
-  padding: 1% 0;
-  height: 100%;
+  padding: 2% 0;
 }
 
 
@@ -154,65 +140,55 @@ html {
   padding-bottom: 3.2% !important;
 }
 
-.c3-tooltip-container {
-  color: black !important;
-}
+
 
 .saleScreenGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 85% 15%;
+  grid-template-rows: 87vh 7vh;
   background-color: #ededed;
 }
 
-.innerSaleGrid {
+.saleGrid {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 20% 20%;
   background-color: #333;
   bottom: 0;
   background-color: #ededed;
 }
 
-.innerSaleGrid {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  background-color: #333;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #ededed;
-}
-
-.innerSaleGrid button {
+.saleGrid button {
   color: white;
-  border: none;
 }
 
-.innerSaleGrid button:nth-child(1) {
-  background-color: #59ce4a;
+.saleGrid button:nth-child(1) {
+  background-color: #31c23d;
   font-size: 1.3em;
   grid-column: 1 / 3;
-  grid-row: 1 / 4;
+  grid-row: 1 / 1;
+  padding-top: 14%;
+  padding-bottom: 14%;
 }
-.innerSaleGrid button:nth-child(2) {
-  background-color: #348be6;
+.saleGrid button:nth-child(2) {
+  background-color: #1778dc;
   font-size: 1.3em;
   grid-column: 3 / 5;
-  grid-row: 1 / 4;
+  grid-row: 1 / 1;
 }
-.innerSaleGrid button:nth-child(3) {
+.saleGrid button:nth-child(3) {
   background-color:#ffc004;
   font-size: 1.3em;
   grid-column: 1 / 3;
-  grid-row: 4 / 6;
+  grid-row: 2 / 2;
+  padding-top: 12.5%;
+  padding-bottom: 12.5%;
 }
-.innerSaleGrid button:nth-child(4) {
+.saleGrid button:nth-child(4) {
   background-color: #716f6f;
   font-size: 1.3em;
   grid-column: 3 / 5;
-  grid-row: 4 / 6;
+  grid-row: 2 / 2;
 }
 
 /* *********************** MANAGER SCREEN SECTION ********************** */
@@ -225,20 +201,8 @@ html {
 
 .managerScreenGrid-home {
   display: grid;
-  grid-template-columns: 30vh 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 40% 40%;
-  color: white;
-}
-
-.managerScreenGrid-home  h1 {
-  color: white;
-}
-
-.managerScreenGrid-home  h2 {
-  color: white;
-}
-
-.managerScreenGrid-home  h4 {
+  grid-template-columns: 30vh 1fr 1fr 1fr;
+  grid-template-rows: 20% 1fr 1fr;
   color: white;
 }
 
@@ -249,9 +213,9 @@ html {
   color: white;
 }
 
-.managerScreenGrid-sales {
+.managerScreenGrid-Sales {
   display: grid;
-  grid-template-columns: 30vh 1fr 1fr 1fr 1fr;
+  grid-template-columns: 30vh 1fr 1fr;
   grid-template-rows: 50% 1fr;
   color: white;
 }
@@ -260,14 +224,13 @@ html {
   grid-column: 1;
   grid-row: 1 / 5;
   display: grid;
-  grid-template-rows: 5vh 5vh 5vh 5vh 5vh 5vh;
-  grid-row-gap: 6%;
-  background-color: #333;
-  height: 100%;
+  grid-template-rows: 5vh 5vh 5vh 5vh 5vh 5vh 5vh;
+  background-color: white;
+  border-right: 1px solid rgb(84, 178, 255);
 }
 
 .manager-navigation .item {
-  color: white;
+  color: rgb(84, 178, 255);
   padding: 1.5em;
   text-decoration: none;
   font-size: 1.4em;
@@ -296,9 +259,8 @@ html {
 }
 
 .managerCard-1 {
-  background-color: #5959e6;
-  grid-column: 2 / 4;
-  grid-row: 1 /1;
+  background-color: rgb(54, 122, 214);
+  grid-column: 2 / 3;
   width: 90%;
   height: 90%;
   text-align: center;
@@ -306,9 +268,8 @@ html {
 }
 
 .managerCard-2 {
-  background-color: #e6a059;
-  grid-column: 4 / 6;
-  grid-row: 1 /1;
+  background-color: rgb(242, 131, 59);
+  grid-column: 3 / 4;
   width: 90%;
   height: 90%;
   text-align: center;
@@ -316,9 +277,8 @@ html {
 }
 
 .managerCard-3 {
-  background-color: #a059e6;
-  grid-column: 6 / 8;
-  grid-row: 1 /1;
+  background-color: rgb(154, 34, 179);
+  grid-column: 4 / 5;
   width: 90%;
   height: 90%;
   text-align: center;
@@ -326,33 +286,16 @@ html {
 }
 
 .managerCard-4 {
-  background-color: #e65959;
-  grid-column: 6 / 10;
-  grid-row: 3;
-  margin: 2% 0 0 3%;
+  background-color: rgb(187, 72, 61);
+  grid-column: 2 / 4;
+  grid-row: 2;
+  margin: 1% 0 0 3%;
   width: 95%;
-  height: 92%;
+  height: 95%;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.managerCard-5 {
-  background-color: #a0e659;
-  grid-column: 8 / 10;
-  grid-row: 1 /1;
-  width: 90%;
-  height: 90%;
-  text-align: center;
-  margin: 3% 0 0 5%;
-}
-
-.managerClockTable {
-  grid-column: 2 / 6;
-  grid-row: 3 / 3;
-  padding-top: 2%;
-  padding-left: 3%;
 }
 
 .kitchenGridContainer {
@@ -377,7 +320,7 @@ html {
 }
 
 .kitchenOldOrder {
-  /* background: #e65959 */
+  /* background: red */
   -webkit-animation: warningFlash 1s infinite
 }
 
@@ -386,7 +329,7 @@ html {
     background: rgb(255, 78, 113)
   }
   50%, 100% {
-    background: #e65959
+    background: red
   }
 }
 
@@ -397,97 +340,27 @@ html {
   /* overflow: hidden; */
 }
 
-.sales-graph-options {
+.selectGraphDropDown {
   grid-row: 1 / 1;
-  grid-column:  5 / 5;
-  padding: 5%;
-}
-
-.inventory-graph-options {
-  grid-row: 1 / 1;
-  grid-column:  5 / 5;
-  padding: 5%;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.inventory-graph-options button{
-  font-size: 1em;
-  padding: 3%;
-  margin: 1%;
-  border-radius: 2%;
-  border: none;
-  color: white;
+  grid-column:  4 / 5;
+  padding-top: 5%;
 }
 
 .addInventoryForm {
   grid-row: 2 / 2;
   grid-column:  2 / 6;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(8, minmax(10vh, 1fr));
-  padding-left: 0.5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-left: 1%;
 }
 
-.addInventoryForm div {
-  color: black;
-  grid-row: 1 / 1;
-  text-align: center;
-}
-
-.addInventoryForm input {
-  grid-row: 2 / 2;
-  margin-bottom: 0.5%;
-  margin-right: 1%;
-  font-size: 1em;
-  border: 1px solid #5959e6;
+.inventoryInput {
+  padding: 0.3%;
   font-family: 'Catamaran', sans-serif;
-  color: black;
-}
-
-.addInventoryForm span {
-  grid-row: 2 / 2;
-  color: #5959e6;
-  font-size: 1.2em;
-  border: none;
-  padding-left: 2%;
-  margin: 0 0 0 0.5%;
-}
-
-.removeInventoryForm {
-  grid-row: 2 / 2;
-  grid-column:  2 / 6;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(4, minmax(10vh, 1fr));
-  color: black;
   font-size: 1em;
-  padding-left: 0.5%;
-  padding-top: 1%;
-  padding-bottom: 2%;
-}
-
-.removeInventoryForm-dropdown {
-  grid-row: 2 / 2;
-  grid-column:  1 / 1;
-}
-
-.removeInventoryForm span {
-  grid-row: 2 / 2;
-  grid-column:  2 / 2;
-  color: #e65959;
-  font-size: 1.2em;
-  border: none;
-  padding-top: 2%;
-  padding-left: 2%;
-  margin: 0 0 0 0.5%;
 }
 
 .graphGrid-inventory {
   grid-row: 1 / 1;
-  grid-column: 2 / 5;
+  grid-column: 2 / 4;
 }
 
 .graphTable {
@@ -508,14 +381,6 @@ html {
   grid-template-rows: 1fr 1fr;
 }
 
-.profileGridDelete {
-  display: grid;
-  grid-column: 2;
-  grid-row: 1;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
 .profileGridImage {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -531,7 +396,7 @@ html {
 .profileGridDetails {
   grid-column: 2 / 3;
   grid-row: 1 / 1;
-  color: rgb(80, 80, 80);
+  color: rgb(84, 178, 255);
   padding-left: 5%;
 }
 
@@ -550,36 +415,17 @@ html {
   color: black;
   grid-column: 2 / 3;
   grid-row: 2 / 2;
-  margin-left: 2%;
-}
-
-.employeeSelect * {
-  margin-bottom: 1%;
+  padding-left: 2%;
 }
 
 .employeeSelect button {
   padding: 2%;
-  margin: 1%;
   border-radius: 5%;
-  border: none;
-  background-color: #5959e6;
-  color: white;
 }
 
 .employeeSelect input {
   width: 60vh;
   height: 2vh;
-}
-
-input[type="file"] {
-    display: none;
-}
-.custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    margin-left: 1%;
 }
 
 .employeeSelect .employeeIdLabel {
@@ -588,7 +434,7 @@ input[type="file"] {
 }
 
 .employeeSelect .newEmployeeNameLabel {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .transactionCash {
@@ -698,11 +544,6 @@ input[type="file"] {
   margin: 1.5%;
 }
 
-.transactionCreditConfirmed input {
-  border: none;
-  width: 100%;
-}
-
 .sigCanvas {
   border-bottom: 1px solid black;
 }
@@ -710,7 +551,7 @@ input[type="file"] {
 /* variables to keep color themes constant? */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
-  --main-highlight: #e65959;
+  --main-highlight: red;
 }
 
 .wrapper {
@@ -723,15 +564,14 @@ input[type="file"] {
   position: absolute;
   margin: 0;
   transform: translate(-50%, -15%);
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
-  border: 1px solid #394049;
+  border: 1px solid #919191;
   border-radius: 2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .wrapper * {
-  border: 1px solid #394049;
+  border: 1px solid #605e5e;
   border-radius: 2%;
 }
 
@@ -745,36 +585,52 @@ input[type="file"] {
   top: 35%;
   transform: translate(-50%, -50%);
   display: inline-block;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /*
   margin: 0;
-  background-color: #5959e6; */
+  background-color: rgb(52, 158, 255); */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -80%);
+  opacity: 0.80;
+  display: inline-block;
+  font-size: 7.5em;
+}
+
+.logo * {
+  fill: rgb(26, 150, 240);
+}
+
+.logo-text {
+  font-size: 15%;
+  margin: 0;
+  padding: 0;
 }
 
 .pinNumber {
   /*
   margin: 0;
-  background-color: #5959e6; */
+  background-color: rgb(52, 158, 255); */
   border-bottom: 1px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
  .wrapper div:nth-child(13) {
    grid-column: 1 / 4;
    /* padding: 20px 20px; */
    background-color: var(--main-highlight);
-   background-color: #59a0e6;
+   background-color: rgb(112, 198, 60);
    padding: 10px;
  }
 
  .wrapper div:nth-child(10) {
-   background-color: #5959e6;
-   color: #e6e659;
+   background-color: rgb(238, 153, 64);
  }
 
  .wrapper div:nth-child(12) {
-   background-color: #5959e6;
-   color: #e6e659;
+   background-color: rgb(240, 91, 71);
  }
 
 
@@ -824,7 +680,7 @@ input[type="file"] {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #0c3179;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -853,7 +709,7 @@ input[type="file"] {
 
 .navbar {
   border-bottom: 1px solid #333;
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(84, 178, 255);
   color: white;
   width: 100%;
 }
@@ -875,14 +731,8 @@ input[type="file"] {
 }
 
 .navBack {
-  position: relative;
-  left: 1%;
-  top: 0.5%;
-  font-size: 1.5em;
-}
-.navAlert {
-  position: relative;
-  left: 2.5%;
+  position: absolute;
+  left: 5%;
   top: 1%;
   font-size: 1.5em;
 }
@@ -890,193 +740,6 @@ input[type="file"] {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
-
-/**** Alert Manager about Ing#e65959ient Removal Modal ****/
-
-.alertRemovalModal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(185, 185, 185);
-  margin:0;
-  padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.alert-removal-modal-header {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  padding: 2px 16px;
-  background-color: #5959e6;
-  color: white;
-}
-
-.alert-removal-close {
-  grid-column: 4;
-  text-align: right;
-  font-size: 28px;
-}
-
-.alert-removal-close:hover,
-.alert-removal-close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.alert-removal-modal-body {
-  display: grid;
-  grid-template-rows: repeat(2, minmax(10vh, 1fr));
-  background-color: white;
-  color: black;
-  font-size: 1.8em;
-  padding: 2px 16px;
-}
-
-.alert-removal-modal-footer {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  padding: 2px 16px;
-  background-color: #5959e6;
-  color: white;
-  grid-column-gap: 1%;
-  grid-row-gap: 1%;
-}
-
-.alert-removal-modal-footer button {
-  margin: 2%;
-  margin-left: 12%;
-  margin-right: 12%;
-  font-size: 1.2em;
-  padding: 3%;
-  border-radius: 2%;
-  border: none;
-  color: white;
-}
-
-/* VOID MODAL STYLING */
-
-.voidModal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(185, 185, 185);
-  margin:0;
-  padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.void-modal-header {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  padding: 2px 16px;
-  background-color: #5959e6;
-  color: white;
-}
-
-.void-modal-title {
-  grid-column: 1;
-  font-size: 26px;
-}
-
-.void-modal-nav-left {
-  grid-column: 2;
-  text-align: center;
-  font-size: 28px;
-}
-.void-modal-nav-right {
-  grid-column: 3;
-  text-align: center;
-  font-size: 28px;
-}
-.voidClose {
-  grid-column: 4;
-  text-align: right;
-  font-size: 28px;
-}
-
-.voidClose:hover,
-.voidClose:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.void-modal-body {
-  display: grid;
-  grid-template-rows: repeat(5, minmax(10vh, 1fr));
-  background-color: white;
-  padding: 2px 16px;
-}
-
-.void-modal-list-head {
-  grid-row: 1/1;
-  font-size: 25px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.void-modal-list-head1 {
-  grid-column: 1;
-  text-align: left;
-  padding-top: 3%;
-}
-
-.void-modal-list-head2 {
-  grid-column: 2;
-  text-align: right;
-  padding-top: 3%;
-}
-
-.void-modal-order-list {
-  grid-row: 2/5;
-  font-size: 24px;
-  max-height: 38vh;
-  overflow-y: scroll;
-}
-
-.void-modal-footer {
-  display: grid;
-  grid-template-columns: 33% 34% 33%;
-  padding: 2px 16px;
-  background-color: #5959e6;
-  color: white;
-  grid-column-gap: 1%;
-  grid-row-gap: 1%;
-}
-
-.void-modal-button1 {
-  grid-column: 1;
-  padding: 2%;
-  margin: 2%;
-  border-radius: 2%;
-  font-size: 20px;
-}
-
-.void-modal-button2 {
-  grid-column: 2;
-  padding: 2%;
-  margin: 2%;
-  border-radius: 2%;
-  font-size: 20px;
-}
-
-.void-modal-button3 {
-  grid-column: 3;
-  padding: 2%;
-  margin: 2%;
-  margin-right: 7%;
-  border-radius: 2%;
-  font-size: 20px;
 }
 
 /* DISCOUNT MODAL STYLING */
@@ -1095,6 +758,23 @@ input[type="file"] {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* OPTION MODAL STYLING */
+
+.voidModal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(185, 185, 185);
+  margin:0;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Modal Content */
 .modal-content {
   background-color: white;
   margin: auto;
@@ -1122,7 +802,7 @@ input[type="file"] {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1130,7 +810,7 @@ input[type="file"] {
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 
@@ -1138,22 +818,22 @@ input[type="file"] {
 
 /***        MANAGER CUSTOMIZATION       **/
 .addItem {
-  background-color: #e65959 !important;
+  background-color: red !important;
 
 }
 
 .saleScreenGridManager {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 85% 15%;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 87vh 8vh;
   background-color: #ededed;
 }
 .saleItemGridManager {
-  grid-row: 1 / 1;
-  grid-column: 1 / 4;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(20vh, 1fr));
-  grid-template-rows: repeat(5, minmax(20vh, 1fr));
+  grid-row: 1;
+  grid-column: 1;
+  display: inline-grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
   background-color: #ededed;
   text-align: center;
   min-height: 30vh;
@@ -1165,17 +845,23 @@ input[type="file"] {
 }
 
 .saleItemGridManager * {
-  background-color: rgb(99, 99, 99);
+  background-color: white;
   margin: 0;
   padding: 0;
   overflow-wrap: break-word;
   border-radius: 4%;
-  color: white;
 }
+
+/* .saleItemGridManager div {
+  position: relative;
+  display: grid;
+  grid-template-rows: 2%, 98%;
+} */
+
 
 .saleItemGridManager h3 {
   border-radius: 15%;
-  color: white;
+  color: black;
 }
 
 .saleItemGridManager > * {
@@ -1183,7 +869,6 @@ input[type="file"] {
   border-radius: 4%;
   width: 95%;
   height: 95%;
-  color: white;
 }
 /** item modal **/
 .itemModal {
@@ -1205,7 +890,7 @@ input[type="file"] {
   display: grid;
   grid-template-columns: 98% 10%;
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1216,7 +901,6 @@ input[type="file"] {
   grid-row-gap: 20px;
   border-radius: 5%;
 }
-
 
 .modal-ingredient-grid {
   display: grid;
@@ -1229,14 +913,8 @@ input[type="file"] {
   overflow-x: scroll;
 }
 
-
-.modal-ingredient-input {
-  border: 1px solid #5959e6;
-}
-
-
 .modal-ingredient-item {
-  
+
 }
 
 .modal-category-select {
@@ -1256,7 +934,7 @@ input[type="file"] {
 
 .modal-footer-manager {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 .modal-content-manager {
@@ -1294,7 +972,7 @@ input[type="file"] {
   display: grid;
   grid-template-columns: 98% 10%;
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1327,7 +1005,7 @@ input[type="file"] {
 
 .modal-footer-category {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 .modal-content-category {
@@ -1358,7 +1036,7 @@ input[type="file"] {
   display: grid;
   grid-template-columns: 98% 10%;
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1412,7 +1090,7 @@ input[type="file"] {
 
 .modal-footer-confirmation {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 .modal-content-confirmation {
@@ -1443,7 +1121,7 @@ input[type="file"] {
   display: grid;
   grid-template-columns: 98% 10%;
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1497,7 +1175,7 @@ input[type="file"] {
 
 .modal-footer-removeItem {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 .modal-content-removeItem {
@@ -1528,7 +1206,7 @@ input[type="file"] {
   display: grid;
   grid-template-columns: 98% 10%;
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1582,7 +1260,7 @@ input[type="file"] {
 
 .modal-footer-removeCat {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 .modal-content-removeCat {
@@ -1615,7 +1293,7 @@ input[type="file"] {
   display: grid;
   grid-template-columns: 98% 10%;
   padding: 2px 16px;
-  background-color: #5959e6;
+  background-color: rgb(52, 158, 255);
   color: white;
 }
 
@@ -1669,7 +1347,7 @@ input[type="file"] {
 
 .modal-footer-discard {
     padding: 2px 16px;
-    background-color: #5959e6;
+    background-color: rgb(52, 158, 255);
     color: white;
 }
 .modal-content-discard {
@@ -1678,292 +1356,22 @@ input[type="file"] {
   margin: 0;
   width: 100%;
 }
-
-.noDataNotice {
-  color: rgba(200, 200, 200, 0.8)
-}
 /********discardModal********/
 
 /*****MANAGER TRANSACTION BUTTONS SAVEALL AND DISCARDALL ***/
-
-.transactionGridItemsManager {
-  position: relative;
-  grid-row: 2 / 5;
-  overflow-y: scroll;
-  display:grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 25% 50% 25%;
-  grid-row-gap: 5%;
-}
-
 .saveChanges {
-  position: relative;
-  background-color: #348be6;
+  text-align: center;
+  background-color: #1778dc;
   color: white;
-  font-size: 18px;
-  grid-row: 3;
-  grid-column: 2;
 }
 
 .discardChanges {
-  position: relative;
-  background-color: rgb(240, 91, 71);
+  text-align: center;
+  background-color: #fc4747;
   color: white;
-  font-size: 18px;
-  grid-row: 4;
-  grid-column: 2;
 }
 
 
 /****MANAGER TRANSACTION BUTTONS SAVEALL AND DISCARDALL ***/
-
-/**** DELETE EMPLOYEE *****/
-.delete-employee-select {
-  color: black;
-  grid-row: 1;
-  grid-column: 3;
-}
-
-.deleteEmployeeModal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  top: 35%;
-  left: 54%;
-  width: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 5%;
-  background-color: rgb(185, 185, 185);
-  margin:0;
-  padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.modal-header-deleteEmployee{
-  position: relative;
-  display: grid;
-  grid-template-columns: 98% 10%;
-  padding: 2px 16px;
-  background-color: #5959e6;
-  color: white;
-}
-
-.modal-body-deleteEmployee {
-  display: grid;
-  padding: 20px;
-  grid-template-rows: repeat(8, 5vh);
-  border-radius: 5%;
-}
-
-.modal-body-deleteEmployee h3 {
-  grid-row: 1;
-  color: black;
-}
-
-
-
-.modal-body-deleteEmployee button {
-  color: white;
-  border-radius: 2%;
-
-
-  background-color: #333;
-}
-
-.modal-footer-deleteEmployee {
-    padding: 2px 16px;
-    background-color: #5959e6;
-    color: white;
-}
-.modal-content-deleteEmployee {
-  background-color: white;
-  margin: auto;
-  margin: 0;
-  width: 100%;
-}
-.confirmOrCancelDelete {
-  grid-row: 7;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.confirmConfirmDelete {
-  color: white;
-  padding-top: 4%;
-  text-align: center;
-  margin-right: 13px;
-  border-radius: 3%;
-  margin-left: 13px;
-  grid-column: 1;
-  background-color: #369eff;
-}
-
-.modal-body-employeeName {
-  grid-row: 4;
-  text-align: center;
-}
-
-.modal-body-employeeId {
-  text-align: center;
-  grid-row: 5;
-}
-
-.cancelConfirmDelete {
-  padding-top: 4%;
-  text-align: center;
-  color: white;
-  border-radius: 3%;
-  margin-right: 13px;
-  margin-left: 13px;
-  grid-column: 2;
-  background-color: #807575;
-}
-
-
-/**** DELETE EMPLOYEE *****/
-
-
-/**** Notification Modal *****/
-
-
-.notificationModal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  top: 35%;
-  left: 54%;
-  width: 65%;
-  transform: translate(-50%, -50%);
-  border-radius: 5%;
-  background-color: rgb(185, 185, 185);
-  margin:0;
-  padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.modal-header-notification{
-  position: relative;
-  display: grid;
-  grid-template-columns: 98% 10%;
-  padding: 2px 16px;
-  background-color: #5959e6;
-  color: white;
-}
-
-.modal-body-notification {
-  display: grid;
-  padding: 20px;
-  grid-template-rows: repeat(8, 5vh);
-  grid-row-gap: 2px;
-  overflow-y: scroll;
-  border-radius: 5%;
-}
-
-.modal-body-alerts {
-  position: relative;
-  display: grid;
-  grid-template-columns:  25% 25% 40% 10%;
-}
-.alert-employee {
-  grid-column: 1;
-  color: black;
-}
-.alert-employeeId {
-  grid-column: 2;
-  color: black;
-}
-
-.alert-time {
-  grid-column: 3;
-  color: black;
-}
-
-.manager-name {
-  text-align: center;
-  grid-row: 4;
-  color: black;
-}
-
-.manager-time {
-  text-align: center;
-  grid-row: 6;
-  color: black;
-}
-
-
-.alert-notice {
-  grid-column: 4;
-  color: black;
-}
-
-.alert-button {
-  grid-column: 4;
-  color: green;
-}
-
-.modal-body-notification h3 {
-  grid-row: 1;
-  color: black;
-}
-
-
-
-.modal-body-notification button {
-  color: white;
-  border-radius: 2%;
-
-
-  background-color: #333;
-}
-
-.modal-footer-notification {
-    padding: 2px 16px;
-    background-color: #5959e6;
-    color: white;
-}
-.modal-content-notification {
-  background-color: white;
-  margin: auto;
-  margin: 0;
-  width: 100%;
-}
-.confirmOrCancelNotification {
-  grid-row: 7;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.confirmConfirmNotification {
-  color: white;
-  padding-top: 4%;
-  text-align: center;
-  margin-right: 13px;
-  border-radius: 3%;
-  margin-left: 13px;
-  grid-column: 1;
-  background-color: #369eff;
-}
-
-.modal-body-employeeName {
-  grid-row: 4;
-  text-align: center;
-}
-
-.modal-body-employeeId {
-  text-align: center;
-  grid-row: 5;
-}
-
-.cancelConfirmNotification {
-  padding-top: 4%;
-  text-align: center;
-  color: white;
-  border-radius: 3%;
-  margin-right: 13px;
-  margin-left: 13px;
-  grid-column: 2;
-  background-color: #807575;
-}
-
-
-/**** Notification Modal *****/
 
 /***        MANAGER CUSTOMIZATION       **/

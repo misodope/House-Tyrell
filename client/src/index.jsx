@@ -1,32 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute} from 'react-router';
-import {createBrowserHistory} from 'history';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
-
-import reducers from './reducers/reducers.js'
+import { Router, Route, IndexRedirect } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
 
 import App from './components/app.jsx';
+import ManagerHome from './components/managerHome.jsx';
+import InventoryInfo from './components/inventoryInfo.jsx';
+import EmployeeInfo from './components/employeeInfo.jsx';
+import SaleInfo from './components/saleInfo.jsx';
+import Login from './components/login.jsx';
+import TransactionCredit from './components/transactionCredit.jsx';
+import TransactionCash from './components/transactionCash.jsx';
+import TransactionCashConfirm from './components/transactionCashConfirm.jsx';
+import SaleControl from './components/saleControl.jsx';
+import KitchenLog from './components/kitchenLog.jsx';
+import ManagerCustomize from './components/managerCustomize.jsx';
+import HomePage from '../landingPage/homepage.jsx';
 
-const reducer = combineReducers({
-  ...reducers,
-  routing: routerReducer
-})
-
-const store = createStore(reducer);
-
-const history = syncHistoryWithStore(createBrowserHistory(), store)
+const history = createHistory();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <div>
-      <Router history={history}>
-        <Route path="/" component={App}>
-        </Route>
-      </Router>
-    </div>
-  </Provider>,
-  document.getElementById('app')
-)
+  <div>
+    <Router history={history}>
+      <div>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/login" component={Login} status={401} />
+        <Route path="/salesScreen" component={App} />
+        <Route path="/managerhome" component={ManagerHome} />
+        <Route path="/employeeinfo" component={EmployeeInfo} />
+        <Route path="/inventoryinfo" component={InventoryInfo} />
+        <Route path="/saleinfo" component={SaleInfo} />
+        <Route path="/managercustomize" component={ManagerCustomize} />
+        <Route path="/transaction/cash" component={TransactionCash} />
+        <Route path="/transaction/cash/confirm" component={TransactionCashConfirm} />
+        <Route path="/transaction/credit" component={TransactionCredit} />
+        <Route path="/kitchenScreen" component={KitchenLog} />
+      </div>
+    </Router>
+  </div>,
+  document.getElementById('app'),
+);

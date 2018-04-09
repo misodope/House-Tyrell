@@ -1,0 +1,121 @@
+
+.ant-menu {
+  background: #f0f2f5 !important;
+  padding: 1% !important;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.ant-card-head {
+  text-align: center;
+}
+
+.ant-card-grid {
+  background-color: white;
+}
+
+.ant-card-grid img {
+  border-radius: 5%;
+  opacity: 0.75;
+  transition: opacity 1s;
+}
+
+.ant-card-grid:hover > * {
+  opacity: 1.0;
+}
+
+.ant-card-meta-title {
+  text-align: center;
+}
+
+.titleCard div {
+  font-size: 5em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.ant-card .titleCard {
+  overflow: hidden;
+  position: fixed;
+}
+
+.ant-card .firstHeader {
+  position: absolute;
+  left: -100%;
+  top: -10%;
+  animation: firstHeader 0.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.ant-card .secondHeader {
+  position: absolute;
+  top: -10%;
+  right: -100%;
+  animation: secondHeader 0.5s forwards;
+  animation-delay: 1s;
+}
+
+.ant-card .thirdHeader {
+  position: relative;
+  top: 20vh;
+  z-index: 1;
+  animation: thirdHeader 3.5s;
+}
+
+@keyframes firstHeader {
+    100% { left: 0; }
+}
+
+@keyframes secondHeader {
+    100% { right: 20%; }
+}
+
+@keyframes thirdHeader {
+  0%   { opacity: 0; }
+  25%  { opacity: 0; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+@media all and (max-width: 1690px) {
+  .titleCard div {
+    font-size: 5em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .titleCard div {
+    font-size: 4em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media all and (max-width: 980px) {
+  .titleCard div {
+    font-size: 3em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media all and (max-width: 736px) {
+  .titleCard div {
+    font-size: 2em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .titleCard div {
+    font-size: 1em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
