@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactTable from 'react-table';
-import withStyles from "isomorphic-style-loader/lib/withStyles";
-import reactTableCss from "react-table/react-table.scss";
 class InventoryWasteTable extends React.Component {
   constructor(props) {
     super(props);
@@ -73,6 +71,4 @@ class InventoryWasteTable extends React.Component {
   }
 }
 
-export default compose(
-  withStyles(reactTableCss)
-)(InventoryWasteTable);
+export default InventoryWasteTable;

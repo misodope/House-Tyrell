@@ -10,8 +10,6 @@ import ReactTable from 'react-table';
 import ConfirmationModal from './confirmationModal.jsx';
 import socket from '../socket.js';
 import { Upload, message, Button, Icon } from 'antd';
-import withStyles from "isomorphic-style-loader/lib/withStyles";
-import reactTableCss from "react-table/react-table.scss";
 
 const columns =
 [
@@ -482,6 +480,4 @@ class EmployeeInfo extends React.Component {
 }
 
 
-export default compose(
-  withStyles(reactTableCss)
-)(withRouter(EmployeeInfo));
+export default withRouter(EmployeeInfo);

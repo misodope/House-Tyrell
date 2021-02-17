@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Select from 'react-select';
-import FaAngleLeft from 'react-icons/lib/fa/angle-left';
-import FaAngleRight from 'react-icons/lib/fa/angle-right';
+
 import VoidList from './voidList.jsx';
 import socket from '../socket.js';
 
@@ -222,10 +221,10 @@ export default class VoidModal extends React.Component {
         <div className="void-modal-header">
           <div className="void-modal-title">Void </div>
           <div className="void-modal-nav-left">
-          <FaAngleLeft onClick={() => this.handleLeft()} />
+          {/* <FaAngleLeft onClick={() => this.handleLeft()} /> */}
           </div>
           <div className="void-modal-nav-right">
-          <FaAngleRight onClick={() => this.handleRight()} />
+          {/* <FaAngleRight onClick={() => this.handleRight()} /> */}
           </div>
           <div className="voidClose" onClick={() => closeModal('voidModal')}>&times;</div>
         </div>

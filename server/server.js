@@ -17,7 +17,7 @@ const Op = Sequelize.Op;
 const app = express();
 const port = process.env.PORT || 3000;
 const server = app.listen(port);
-// const io = require('socket.io').listen(server);
+const io = require('socket.io')(server);
 
 const sess = {
   secret: 'tyrell',
@@ -904,32 +904,32 @@ const myCronJob = new CronJob('0 6 * * * *', () => {
 myCronJob.start();
 // ************************NO TOUCH*******************************/
 /*******SOCKET****/
-// io.on('connection', (socket) => {
-//   console.log('New client connected');
-//   socket.on('madeSale', (sale) => {
-//     io.sockets.emit('madeSale', sale);
-//   });
+io.on('connection', (socket) => {
+  console.log('New client connected');
+  socket.on('madeSale', (sale) => {
+    io.sockets.emit('madeSale', sale);
+  });
 
-//   socket.on('employeeLogin', (data) => {
-//     io.sockets.emit('employeeLogin', data)
-//   })
+  socket.on('employeeLogin', (data) => {
+    io.sockets.emit('employeeLogin', data)
+  })
 
-//   socket.on('employeeLogout', (employee) => {
-//     io.sockets.emit('employeeLogout', employee)
-//   })
+  socket.on('employeeLogout', (employee) => {
+    io.sockets.emit('employeeLogout', employee)
+  })
 
-//   socket.on('alertManager', (alert)=> {
-//     io.sockets.emit('alertManager', alert);
-//   })
+  socket.on('alertManager', (alert)=> {
+    io.sockets.emit('alertManager', alert);
+  })
 
-//   socket.on('alertEmployee', (manager) => {
-//     io.sockets.emit('alertEmployee', manager);
-//   })
-//   // disconnect is fired when a client leaves the server
-//   socket.on('disconnect', () => {
-//     console.log('user disconnected');
-//   })
-// });
+  socket.on('alertEmployee', (manager) => {
+    io.sockets.emit('alertEmployee', manager);
+  })
+  // disconnect is fired when a client leaves the server
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  })
+});
 
 
 

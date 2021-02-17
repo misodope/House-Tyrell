@@ -6,9 +6,9 @@ import socketIOClient from 'socket.io-client'
 //
 
 
-const socket = socketIOClient(config.ip + ':' + '3000');
 // comment this if on localhost
+const socket = socketIOClient(config.ip + ':' + '3000');
 
-module.exports = socket;
+export default socket;
 
 // process.env.PORT ||
