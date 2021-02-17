@@ -2,6 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import ReactTable from 'react-table';
 import socket from '../socket.js';
+import withStyles from "isomorphic-style-loader/lib/withStyles";
+import reactTableCss from "react-table/react-table.scss";
 
 class SaleTable extends React.Component {
   constructor(props) {
@@ -142,4 +144,6 @@ class SaleTable extends React.Component {
   }
 }
 
-export default SaleTable;
+export default compose(
+  withStyles(reactTableCss)
+)(SaleTable);

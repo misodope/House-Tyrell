@@ -7,7 +7,8 @@ import Navigation from './managerNav.jsx';
 import Navbar from './navbar.jsx';
 import ManagerHomeBar from './managerHomeBar.jsx';
 import socket from '../socket.js';
-
+import withStyles from "isomorphic-style-loader/lib/withStyles";
+import reactTableCss from "react-table/react-table.scss";
 
 const columns =
 [
@@ -250,4 +251,6 @@ class ManagerHome extends React.Component {
   }
 }
 
-export default ManagerHome;
+export default compose(
+  withStyles(reactTableCss)
+)(ManagerHome);

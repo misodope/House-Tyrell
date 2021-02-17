@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRedirect } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
+import { Router, Route, IndexRedirect, useHistory } from 'react-router';
 
 import App from './components/app.jsx';
 import ManagerHome from './components/managerHome.jsx';
@@ -17,7 +16,7 @@ import KitchenLog from './components/kitchenLog.jsx';
 import ManagerCustomize from './components/managerCustomize.jsx';
 import HomePage from '../landingPage/homepage.jsx';
 
-const history = createHistory();
+const history = useHistory();
 
 ReactDOM.render(
   <div>

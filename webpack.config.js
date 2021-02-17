@@ -6,6 +6,7 @@ const BUILD_DIR = path.join(__dirname, '/client/dist');
 const APP_DIR = path.join(__dirname, '/client/src');
 
 module.exports = {
+  mode: "development",
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
@@ -19,8 +20,8 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            query: {
-              presets: ['react', 'es2015'],
+            options: {
+              presets: ['@babel/preset-react'],
             },
           },
         ],
@@ -78,10 +79,5 @@ module.exports = {
         ],
       },
     ],
-  },
-  resolve: {
-    alias: {
-      'react': path.resolve(__dirname, './node_modules', 'react'),
-    },
-  },
+  }
 };
